@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+set(CMAKE_CXX_STANDARD 14)
+project(lfn-games)
+add_executable(${PROJECT_NAME} src/main.cpp include/snake.h include/entity.h src/snake.cpp)
+target_include_directories(${PROJECT_NAME} PRIVATE include)
+target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
